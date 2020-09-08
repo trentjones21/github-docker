@@ -1,4 +1,4 @@
-name: "GitHub Docker Action"
+name: "GitHub Container Registry Docker Action"
 description: "Build and publish your repository as a Docker image and push it to GitHub Package Registry in one step"
 inputs:
   accessToken:
