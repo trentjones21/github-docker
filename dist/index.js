@@ -964,7 +964,7 @@ async function run() {
     const password = core.getInput("accessToken", { required: true });
     await exec.exec(
       `docker`,
-      ["login", "docker.pkg.github.com", "--username", username, "--password", password]);
+      ["login", "ghcr.io", "--username", username, "--password", password]);
 
     // Process the repository name.
     let repository = core.getInput("repository", { required: false });
@@ -980,7 +980,7 @@ async function run() {
     imageName = imageName.toLowerCase();
 
     // Generate an image URL.
-    const imageURL = `docker.pkg.github.com/${repository}/${imageName}`;
+    const imageURL = `ghcr.io/${repository}/${imageName}`;
 
     // Process the build arguments.
     let buildArgs = [];
